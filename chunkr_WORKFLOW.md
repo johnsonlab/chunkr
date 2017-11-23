@@ -151,10 +151,4 @@ The chunkbase file can be opened in Rstudio or a text editor if desired. While t
 
     ---
 
-## Issues
 
-1. *Add Feature:* Automatic generation of dat:// archive for sharing individual code chunks and associated data *via* Beaker Browser.
-
-chunkr beaker_export hash "desired_chunk_name"
-
-initializes a dat archive under the same hash, copies data files called by code chunk into dat archive.
