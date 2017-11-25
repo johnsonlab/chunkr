@@ -15,7 +15,7 @@ Copying and pasting code chunks between projects is simple and effective, and ve
 1\. Inside file Oldproject.Rmd:
 
 
-    ```{r, Oldproject, echo=FALSE, messages=FALSE, chunkr=TRUE, chunkr.mode=SYNC}
+    ```{r, Oldproject.chunk1, echo=FALSE, messages=FALSE, chunkr=TRUE, chunkr.mode=SYNC}
 
     print("hello world")
 
@@ -150,5 +150,3 @@ The chunkbase file can be opened in Rstudio or a text editor if desired. While t
     6 print("hello world")
 
     ---
-
-
