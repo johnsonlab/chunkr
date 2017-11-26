@@ -1,0 +1,47 @@
+---
+title: "Save chunk output to file"
+author: "Joshua Johnson, Ph.D."
+date: "11/23/2017"
+output: html_document
+---
+
+[StackOverflow](https://stackoverflow.com/questions/33418505/save-knitr-chunk-to-r-file) describes a hooks approach to write a chunk to a file, where the first chunk sets up the function **write_chunk**:
+
+```{r setup, echo=TRUE}
+library(knitr)
+knit_hooks$set(write_chunk = function(before, options, envir) {
+    if (before) {
+      fileConn<-file(paste0("chunk_",options$label,".cbs") )# ,open="a")
+      writeLines(options$code, fileConn)
+      close(fileConn)
+    }
+})
+```
+
+Knitting this document saves the following chunk to file numbers_output.R:
+
+```{r, numbers_output, write_chunk=TRUE}
+numbers<-c(1:55)
+numbers
+```
+
+Next step is to append to chunkbase text file:
+
+from , adding  
+
+> ,open="a"
+
+after file extension as follows:
+
+> .cbs") ,open="a" )
+
+This is a plausible start towards exporting code chunks to the desired chunkbase file. Here's the next chunk to append to the first:
+
+```{r letters_output, write_chunk=TRUE}
+#myname<-c("j","o","s","h","u","a")
+myname<-c("j","o","s","h")
+myname
+```
+
+
+
