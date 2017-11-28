@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # chunkr
 
 @johnsonlab
@@ -55,7 +60,7 @@ Execution of this new chunk in Newproject.Rmd imports the contents of the hash-i
     ```
 **Message in console:**
 
-> #chunkr imported chunk *u87th44556t9coml15* from chunkbase. To keep SYNC'd with original code chunk, edit chunkr.mode to "SYNC" or your code chunk will be forked again at the next execution.
+> chunkr imported chunk *u87th44556t9coml15* from chunkbase. To keep SYNC'd with original code chunk, edit chunkr.mode to "SYNC" or your code chunk will be forked again at the next execution.
 
 4\. **OPTION 1 for Newproject.Rmd.** FORK original code chunk by keeping chunkr.mode=FORK. At next chunk execution:
 
